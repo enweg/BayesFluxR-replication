@@ -1,11 +1,6 @@
 # Run the line below if BayesFluxR is not yet installed.
 # install.packages("BayesFluxR")
 
-# It is best to install Julia manually. Although BayesFluxR has the
-# ability to install Julia automatically, this fails on some systems.
-# Specifying the location of the Julia installation
-Sys.setenv(JULIA_HOME = "/Applications/Julia-1.8.app/Contents/Resources/julia/bin/")
-
 library(BayesFluxR)
 BayesFluxR_setup(installJulia = TRUE, env_path = ".", seed = 123456)
 
