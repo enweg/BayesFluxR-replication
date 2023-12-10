@@ -5,6 +5,11 @@ This document provides information on replication of the paper
 	BayesFlux(R): R and Julia Libraries for Bayesian Neural Network Estimation
 	Rui Jorge Almeida, Nalan Bastürk, Enrico Wegner
 
+Please clone this repository in your home directory. In Windows this is usually 
+`C:\Users\yourusername\` while on unix based systems this is `~/`. If you prefer
+cloning the repository into another directory, you will have to adjust paths 
+in this file. 
+
 **General Structure**
 
 The replication folder '~/BayesFluxR-replication' contains the following three folders:
