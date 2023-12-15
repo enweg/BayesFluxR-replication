@@ -1,4 +1,7 @@
-using Pkg; Pkg.activate("."); Pkg.instantiate();
+using Pkg; Pkg.activate("."); 
+# If instroduction-example.jl has not been run before, uncomment the following
+# line
+Pkg.instantiate();
 using BayesFlux, Flux
 using Distributions
 
