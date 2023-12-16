@@ -42,13 +42,15 @@ After installation of Julia and R, BayesFlux and BayesFluxR can be installed.
 - R: BayesFluxR can be installed from CRAN by using 
 
 ```
-install.packages("BayesFluxR")
+install.packages("remotes")
+remotes::install_github("enweg/BayesFluxR@v0.1.3")
 ```
 
 - Jula: BayesFlux can be installed from the official repository using 
 
 ```
-using Pkg; Pkg.add("BayesFlux")
+using Pkg
+Pkg.add(Pkg.PackageSpec(;name="BayesFlux", version="0.2.2"))
 ```
 
 Note: All running times below were measured on a MacBook Air M1

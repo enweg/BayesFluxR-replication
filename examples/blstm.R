@@ -1,6 +1,3 @@
-# The best way to replicate this is to use a manual installation of
-# Julia. Replace the path below to the Julia installation
-Sys.setenv(JULIA_HOME="/Applications/Julia-1.8.app/Contents/Resources/julia/bin/")
 # Loading BayesFluxR and setting up
 library(BayesFluxR)
 BayesFluxR_setup(installJulia = TRUE, env_path = ".", seed = 6150533)
