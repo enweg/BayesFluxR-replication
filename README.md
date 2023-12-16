@@ -54,7 +54,7 @@ remotes::install_github("enweg/BayesFluxR@v0.1.3")
 
 ```
 using Pkg
-Pkg.add(Pkg.PackageSpec(;name="BayesFlux", version="0.2.2"))
+Pkg.add(Pkg.PackageSpec(;name="BayesFlux", version="0.2.3"))
 ```
 
 Note: All running times below were measured on a MacBook Air M1

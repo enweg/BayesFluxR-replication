@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 **/Manifest.toml
+examples/*.pdf

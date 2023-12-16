@@ -15,7 +15,7 @@ docker run -it --rm --mount type=bind,source="$(pwd)",target=/root/BayesFluxR-re
 To obtain a R REPL instead, use the following command. 
 
 ```
-docker run -it --rm --mount type=bind,source="$(pwd)",target=/root/BayesFluxR-replication/ bayesflux-replication r
+docker run -it --rm --mount type=bind,source="$(pwd)",target=/root/BayesFluxR-replication/ bayesflux-replication R
 ```
 
 For the actual replication, please follow the steps in the README. The Julia installation location is '/usr/local/julia/bin'. The 'JULIA_HOME' environment variable has already been set, so that step can be skipped during replication. 
