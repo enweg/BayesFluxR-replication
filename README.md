@@ -117,6 +117,9 @@ The best way to do this is to use a manual installation of Julia. All that you
 then need to do is to replace the path below with the path to your already 
 installed Julia executable. 
 
+> [!info]
+> The following step is not needed if run in the official container.
+
 ```
 # It is best to install Julia manually. Although BayesFluxR has the
 # ability to install Julia automatically, this fails on some systems.
@@ -183,6 +186,9 @@ Julia code in the 'examples' directory load pre-simualated data saved in the
 The 'examples' folder is itself an RStudion project. The best way to replicate
 the results is thus to open this project in RStudio. The first step is then to
 point R to the Julia installation by changing the path below. 
+
+> [!info]
+> The following step is not needed if run in the official container.
 
 ```
 # It is best to install Julia manually. Although BayesFluxR has the

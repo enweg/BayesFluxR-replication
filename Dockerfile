@@ -91,9 +91,9 @@ RUN set -eux; \
 # =============================================================================
 
 WORKDIR /root
-run apt-get update
-run yes | apt install git
-run git clone https://github.com/enweg/BayesFluxR-replication.git
+# run apt-get update
+# run yes | apt install git
+# run git clone https://github.com/enweg/BayesFluxR-replication.git
 
 # Julia plots should not be run
 ENV GKSwstype nul
