@@ -20,5 +20,5 @@ docker run -it --rm --mount type=bind,source="$(pwd)",target=/root/BayesFluxR-re
 
 For the actual replication, please follow the steps in the README. The Julia installation location is '/usr/local/julia/bin'. The 'JULIA_HOME' environment variable has already been set, so that step can be skipped during replication. 
 
-> [!info]
+> [!NOTE]
 > All output graphs are saved in the examples directory of the 'BayesFluxR-replication' folder. Running the code in the container will overwrite the current existing graphs, since the folder is shared between host and container. 

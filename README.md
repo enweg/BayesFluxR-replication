@@ -117,7 +117,7 @@ The best way to do this is to use a manual installation of Julia. All that you
 then need to do is to replace the path below with the path to your already 
 installed Julia executable. 
 
-> [!info]
+> [!NOTE]
 > The following step is not needed if run in the official container.
 
 ```
@@ -187,7 +187,7 @@ The 'examples' folder is itself an RStudion project. The best way to replicate
 the results is thus to open this project in RStudio. The first step is then to
 point R to the Julia installation by changing the path below. 
 
-> [!info]
+> [!NOTE]
 > The following step is not needed if run in the official container.
 
 ```
