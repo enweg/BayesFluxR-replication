@@ -10,6 +10,10 @@ Please clone this repository in your home directory. In Windows this is usually
 cloning the repository into another directory, you will have to adjust paths 
 in this file. 
 
+> [!NOTE]
+> All replication can also be done in a Docker container. This is the best way to 
+> replicate all findings. For more information, please see the *USE-CONTAINER.md* file.
+
 **General Structure**
 
 The replication folder '~/BayesFluxR-replication' contains the following three folders:
