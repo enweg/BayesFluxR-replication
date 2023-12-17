@@ -2,7 +2,11 @@
 # Start with a pre-build R container. This was easier than starting from 
 # a pre-build julia container. 
 # =============================================================================
-FROM rocker/r-ver:4.2.2
+FROM rocker/r-ver:4.3.2
+
+run R -e "install.packages(\"rstan\")"
+run R -e "install.packages(\"bayesplot\")"
+
 
 # =============================================================================
 # Add Julia to the container. 

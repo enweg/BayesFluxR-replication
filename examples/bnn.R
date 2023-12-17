@@ -50,6 +50,7 @@ dev.off()
 
 # Using bayesplot
 ys <- to_bayesplot(ys, "y")
+# install.packages("bayesplot")
 library(bayesplot)
 mcmc_areas(ys,
            pars = paste0("y", 1:10),
@@ -58,6 +59,7 @@ end <- dim(ys)[1]
 pdf(file = "bnn-ppc-dens-overlay-R.pdf")
 bayesplot::ppc_dens_overlay(y = y_train, yrep = ys[(end-100):end, 1, ])
 dev.off()
+# install.packages("rstan")
 library(rstan)
 rhats <- apply(ys, 3, rstan::Rhat)
 ess <- apply(ys, 3, rstan::ess_bulk)
