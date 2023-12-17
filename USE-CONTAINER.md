@@ -1,3 +1,6 @@
+> [!NOTE]
+> Building the container can take a while. On my Macbook Air M1, this can take up to ten minutes. 
+
 The best way to replicate the results is to use a container. For this, please first make sure that Docker is installed. If docker is not yet installed, please see the [official documentation on installing Docker](https://docs.docker.com/get-docker/). 
 
 After installing Docker, start a new terminal in the 'BayesFluxR-replication' folder. Next, build the container using the following command. 
