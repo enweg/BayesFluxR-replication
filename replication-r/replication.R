@@ -1,25 +1,28 @@
 # Run the line below if BayesFluxR is not yet installed.
 # install.packages("BayesFluxR")
 
-# if you manually installed Julia, which is the recommended way, then 
-# set the JULIA_HOME environment variable to the path of you Julia installation. 
-# Sys.setenv(JULIA_HOME = )
+# if you manually installed Julia, which is the recommended way, then
+# set the JULIA_HOME environment variable to the path of you Julia installation.
+Sys.setenv(JULIA_HOME = "/Applications/Julia-1.9.app/Contents/Resources/julia/bin/")
 
-library(BayesFluxR)
-BayesFluxR_setup(installJulia = TRUE, env_path = ".", seed = 123456)
+install.packages("JuliaCall")
+# install.packages("BayesFluxR")
 library(JuliaCall)
+library(BayesFluxR)
 
 ################################################################################
 # Setup
 # Please make sure to set the working directory to the 'replication-R' folder.
-# If you cloned the replication reposity to your home directory, then the 
-# following code will set the correct working directory. 
+# If you cloned the replication reposity to your home directory, then the
+# following code will set the correct working directory.
 #
 # Info: All running times below were measured on a MacBook Air M1
 ################################################################################
-
-p <- path.expand("~/BayesFluxR-replication/r-code")
+p <- path.expand("~/BayesFluxR-replication/replication-r")
 setwd(p)
+BayesFluxR_setup(installJulia = TRUE, env_path = ".", seed = 123456)
+
+
 
 ################################################################################
 # Introduction Section
@@ -66,7 +69,7 @@ chain <- vi.get_samples(vi, n = 10000)
 
 ################################################################################
 # Computational Implementation Section
-# Entire section needs about 30 seconds to run. 
+# Entire section needs about 30 seconds to run.
 ################################################################################
 
 net <- Chain(Dense(5, 1))
@@ -80,7 +83,7 @@ init <- initialise.allsame(Normal(0, 0.5), like, prior)
 
 ################################################################################
 # Examples Section: BNN
-# Entire section needs about 120 seconds to run. 
+# Entire section needs about 120 seconds to run.
 ################################################################################
 
 # Loading the AR(1) data created in Julia
@@ -132,9 +135,9 @@ dev.off()
 ys <- to_bayesplot(ys, "y")
 # install.packages("bayesplot")
 library(bayesplot)
-mcmc_areas(ys,
-           pars = paste0("y", 1:10),
-           prob = 0.8)
+# mcmc_areas(ys,
+#            pars = paste0("y", 1:10),
+#            prob = 0.8)
 end <- dim(ys)[1]
 pdf(file = "bnn-ppc-dens-overlay-R.pdf")
 bayesplot::ppc_dens_overlay(y = y_train, yrep = ys[(end-100):end, 1, ])
@@ -176,7 +179,7 @@ dev.off()
 
 ################################################################################
 # Examples Section: BLSTM
-# Entire section needs about 120 seconds to run. 
+# Entire section needs about 120 seconds to run.
 ################################################################################
 
 # Loading the AR(1) data created in Julia
@@ -227,9 +230,9 @@ dev.off()
 # Using bayesplot
 ys <- to_bayesplot(ys, "y")
 library(bayesplot)
-mcmc_areas(ys,
-           pars = paste0("y", 1:10),
-           prob = 0.8)
+# mcmc_areas(ys,
+#            pars = paste0("y", 1:10),
+#            prob = 0.8)
 end = dim(ys)[1]
 pdf(file = "./blstm-ppc-dens-overlay-R.pdf")
 bayesplot::ppc_dens_overlay(y = y_train, yrep = ys[(end-100):end, 1, ])

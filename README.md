@@ -10,10 +10,6 @@ Please clone this repository in your home directory. In Windows this is usually
 cloning the repository into another directory, you will have to adjust paths 
 in this file. 
 
-> [!NOTE]
-> All replication can also be done in a Docker container. This is the best way to 
-> replicate all findings. For more information, please see the *USE-CONTAINER.md* file.
-
 **General Structure**
 
 The replication folder '~/BayesFluxR-replication' contains the following folders:
@@ -32,7 +28,7 @@ The replication folder '~/BayesFluxR-replication' contains the following folders
 
 To run the code chunks in the paper and to replicate the results, BayesFlux and
 BayesFluxR are needed. Thus, a basic installation of Julia and R is needed. We
-recommend using Julia 1.8.5 and R 4.2.2, which are the versions that we used.
+recommend using Julia 1.9.4 and R 4.3.1, which are the versions that we used.
 To run Julia and R, your favourite editor or IDE can be used. We used RStudio 
 for R and VS-Code for Julia. 
 
@@ -46,19 +42,19 @@ instructions on
 
 After installation of Julia and R, BayesFlux and BayesFluxR can be installed. 
 
-- R: BayesFluxR can be installed from CRAN by using 
+- R: BayesFluxR can be installed using (This installs the version we used for the paper).
 
 ```
 install.packages("remotes")
 remotes::install_github("enweg/BayesFluxR@v0.1.3")
 ```
 
-If the replication is not using the Docker image, we recommend setting the
-'JULIA_HOME' environment variable to the path of the manual Julia installation.
-This is the best way to replicate the findings using BayesFluxR, since some
-environments do not allow automatic installtion of Julia.  
+We recommend setting the 'JULIA_HOME' environment variable to the path of the 
+manual Julia installation. This is the best way to replicate the findings using 
+BayesFluxR, since some environments do not allow automatic installation of Julia.  
 
-- Julia: BayesFlux can be installed from the official repository using 
+- Julia: BayesFlux can be installed from the official repository using (This again
+uses the version that we used for the paper). 
 
 ```
 using Pkg

@@ -1,10 +1,3 @@
-using Pkg; Pkg.activate("."); Pkg.instantiate();
-using BayesFlux, Flux
-using Distributions, Random; 
-using Serialization
-using StatsPlots
-using Bijectors
-
 ################################################################################
 # Setup
 # Please make sure to set the working directory to the 'replication-julia' folder.
@@ -14,9 +7,16 @@ using Bijectors
 # Info: All running times below were measured on a MacBook Air M1
 ################################################################################
 
-p = joinpath(homedir(), "BayesFluxR-replication", "julia-code")
+p = joinpath(homedir(), "BayesFluxR-replication", "replication-julia")
 cd(p)
 pwd()
+
+using Pkg; Pkg.activate("."); Pkg.instantiate();
+using BayesFlux, Flux
+using Distributions, Random; 
+using Serialization
+using StatsPlots
+using Bijectors
 
 ################################################################################
 # Introduction Section
