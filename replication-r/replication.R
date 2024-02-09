@@ -1,14 +1,10 @@
-# Run the line below if BayesFluxR is not yet installed.
-# install.packages("BayesFluxR")
-
 # if you manually installed Julia, which is the recommended way, then
 # set the JULIA_HOME environment variable to the path of you Julia installation.
 Sys.setenv(JULIA_HOME = "/Applications/Julia-1.9.app/Contents/Resources/julia/bin/")
 
 install.packages("JuliaCall")
-# install.packages("BayesFluxR")
-library(JuliaCall)
 library(BayesFluxR)
+library(JuliaCall)
 
 ################################################################################
 # Setup
